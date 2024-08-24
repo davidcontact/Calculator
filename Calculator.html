@@ -5,6 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator App</title>
     <link rel="stylesheet" href="style.css" />
+    <script>
+  const display = document.getElementById("DisplayInput");
+
+// AddNumber to input
+function addNumber(input) {
+  display.value += input;
+}
+
+// Result Calculator
+function result() {
+  try {
+    display.value = eval(display.value);
+  } catch (Error) {
+    display.value = "Error";
+  }
+}
+
+// Refresh Number
+function clearDisplay() {
+  display.value = "";
+}
+// window.print();
+  </script>
   </head>
   <body>
     <div class="container">
@@ -43,29 +66,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-  const display = document.getElementById("DisplayInput");
-
-// AddNumber to input
-function addNumber(input) {
-  display.value += input;
-}
-
-// Result Calculator
-function result() {
-  try {
-    display.value = eval(display.value);
-  } catch (Error) {
-    display.value = "Error";
-  }
-}
-
-// Refresh Number
-function clearDisplay() {
-  display.value = "";
-}
-// window.print();
-  </script>
   </body>
 </html>
